@@ -37,8 +37,23 @@ public class HolidayAdapter extends ArrayAdapter<Holiday> {
         if(currentHoliday.getHolidayName() == "New Year's Day"){
             imageView.setImageResource(R.drawable.new_year);
             tv2.setText(currentHoliday.getDate().toString());
-        }else{
+        }else if(currentHoliday.getHolidayName() == "Labour Day"){
             imageView.setImageResource(R.drawable.labour_day);
+            tv2.setText(currentHoliday.getDate().toString());
+        }else if(currentHoliday.getHolidayName() == "Chinese New Year"){
+            imageView.setImageResource(R.drawable.cny);
+            tv2.setText(currentHoliday.getDate().toString());
+        }else if(currentHoliday.getHolidayName() == "Hari Raya Puasa"){
+            imageView.setImageResource(R.drawable.hari_raya_puasa);
+            tv2.setText(currentHoliday.getDate().toString());
+        }else if(currentHoliday.getHolidayName() == "Hari Raya Haji"){
+            imageView.setImageResource(R.drawable.hari_raya_haji);
+            tv2.setText(currentHoliday.getDate().toString());
+        }else if(currentHoliday.getHolidayName() == "Deepavali"){
+            imageView.setImageResource(R.drawable.deepavali);
+            tv2.setText(currentHoliday.getDate().toString());
+        }else {
+            imageView.setImageResource(R.drawable.good_friday);
             tv2.setText(currentHoliday.getDate().toString());
         }
         return rowView;

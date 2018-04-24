@@ -35,9 +35,16 @@ public class SecondActivity extends AppCompatActivity {
         aa = new HolidayAdapter(this, R.layout.row, holidays);
         lvHolidays.setAdapter(aa);
 
-        holidays.add(new Holiday("New Year's Day", "1 Jan 2017"));
-        holidays.add(new Holiday("Labour Day", "1 May 2017"));
-
+        if (holiday.equalsIgnoreCase("Secular")) {
+            holidays.add(new Holiday("New Year's Day", "1 Jan 2018"));
+            holidays.add(new Holiday("Labour Day", "1 May 2018"));
+        } else {
+            holidays.add(new Holiday("Chinese New Year", "16 Feb 2018, 17 Feb 2018"));
+            holidays.add(new Holiday("Good Friday", "30 Mar 2018"));
+            holidays.add(new Holiday("Hari Raya Puasa", "15 Jun 2018"));
+            holidays.add(new Holiday("Hari Raya Haji", "22 Aug 2018"));
+            holidays.add(new Holiday("Deepavali", "6 Nov 2018"));
+        }
         lvHolidays.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
